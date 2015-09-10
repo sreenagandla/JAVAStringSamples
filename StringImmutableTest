@@ -1,0 +1,48 @@
+final class Test
+{
+ 					private final int a;
+ 					private final String b;
+
+				 public Test(int a,String b)
+				 {
+						 this.a=a;
+						 this.b=b;
+						 System.out.println("tthe constrcuote has two params");
+				 }
+				 public Test modifyData(int a,String b)
+				 {
+								return new Test(a,b);
+				 }
+				 public Test modifyDataA(int a)
+				 {
+								return new Test(a,this.b);
+				 }
+				 public Test modifyDataB(String b)
+				 {
+								return new Test(this.a,b);
+				 }
+				 public void disp()
+				 {
+				 				System.out.println("a= "+a+" "+" b = "+b );
+				 }
+}
+public class ImmutableTest
+{
+		public static void main(String args[])
+		{
+						Test t=new Test(10,"aaaaaa");
+						System.out.println("T object hashCode: "+t.hashCode());
+						t.disp();
+						
+						Test t1=t.modifyData(20,"bbbbbbbbbb");
+						System.out.println("T object hashCode: "+t1.hashCode());
+						t1.disp();
+						t.disp();
+						
+						Test t2=t.modifyDataB("cccc");
+						System.out.println("T object hashCode: "+t2.hashCode());
+						t2.disp();
+						t.disp();
+		
+		}
+}
