@@ -13,6 +13,7 @@ class StringPrograms
 		System.out.println("Your original string is: "+s);//Hello   
 		String s1=s+" ";
 		String s3="";
+		echo "welcome"
 		for(int i=0;i<s.length();i++)
 		{		
 				int count=0;
@@ -28,6 +29,7 @@ class StringPrograms
 			s3=s3+ch1;//Heo
 		}
 		System.out.println("Your uniq string is: "+s3);
+		
 */
 		
 
